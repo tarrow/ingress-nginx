@@ -176,6 +176,7 @@ The following table shows a configuration option's name, type, and the default v
 |[proxy-request-buffering](#proxy-request-buffering)|string|"on"|
 |[ssl-redirect](#ssl-redirect)|bool|"true"|
 |[force-ssl-redirect](#force-ssl-redirect)|bool|"false"|
+|[preserve-trailing-slash]|bool|"false"|
 |[whitelist-source-range](#whitelist-source-range)|[]string|[]string{}|
 |[skip-access-log-urls](#skip-access-log-urls)|[]string|[]string{}|
 |[limit-rate](#limit-rate)|int|0|
@@ -1094,6 +1095,10 @@ _**default:**_ "true"
 
 ## force-ssl-redirect
 Sets the global value of redirects (308) to HTTPS if the server has a default TLS certificate (defined in extra-args).
+_**default:**_ "false"
+
+## preserve-trailing-slash
+Prevents the trailing slash from being removed when performing an ssl redirect.
 _**default:**_ "false"
 
 ## whitelist-source-range
